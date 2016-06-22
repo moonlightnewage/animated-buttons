@@ -1,0 +1,182 @@
+/*General*/
+
+body {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+    background: #000;
+}
+span {
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #313134;
+    display: inline-block;
+}
+
+/*Sections*/
+
+.container {
+    width: 50%;
+    margin: 5% auto;
+    background: #2ac56c;
+}
+.top {
+    text-align: center;
+}
+.middle {
+    background: #9e54bd;
+}
+
+/*Background animation*/
+
+.move {
+    background: #0a833d;
+    border: inherit;
+    border-radius: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 2s;
+}
+.left-to-right {
+    width: 0;
+    height: inherit;
+}
+.top-to-bottom {
+    height: 0;
+    width: 100%;
+}
+
+/*Top buttons*/
+
+.top .btn {
+    width: 10%;
+    height: 45px;
+    background: #17aa56;
+    border: none;
+    border-radius: 5px;
+    box-shadow: #119e4d 0px 4px;
+    margin: 10px 20px 15px;
+    display: inline-block;
+}
+.btn-1:hover {
+    background: #119e4d;
+    position: relative;
+    top: 2px;
+}
+.btn-2 {
+    transition: transform 5s background 2s;
+}
+.btn-2:hover {
+    background: #0a833d;
+}
+.btn-2:hover .icon {
+    transform: scale(1.2)
+}
+.btn-3:hover {
+    background: transparent;
+    border: 2px dashed #0a833d;
+    box-shadow: 0 0;
+    margin-bottom: 2px;
+}
+.btn-4 {
+    transition: 1.5s;
+}
+.btn-4:hover {
+    transform: rotate(360deg);
+}
+.btn-5 {
+    position: relative;
+}
+.btn-5:hover .top-to-bottom {
+    height: 100%;
+}
+.btn-6 {
+    position: relative;
+}
+.btn-6:hover .left-to-right {
+    width: 100%;
+}
+
+/*Middle buttons*/
+
+.middle .btn {
+    width: 40%;
+    height: 60px;
+    background: #823aa0;
+    border: none;
+    margin: 10px 25px;
+    overflow: hidden;
+}
+.middle .btn span {
+    transition: 2s;
+}
+.middle .btn span::after {
+    content: "";
+    display: inline-block;
+    background-image: url("http://ajax.aspnetcdn.com/ajax/bootstrap/2.3.2/img/glyphicons-halflings.png");
+    width: 15px;
+    height: 15px;
+    background-position: 110px -119px;
+    opacity: 1;
+    position: relative;
+    left: 155px;
+}
+.middle .btn:hover span {
+    transform: translate(-200px, 0);
+}
+
+/*Botton buttons*/
+
+.bottom .btn {
+    width: 42%;
+    height: 60px;
+    background: transparent;
+    border: 2px solid #313134;
+    border-radius: 50px;
+    margin: 10px 20px;
+    transition: 2s;
+}
+.bottom .btn::after {
+    content: "";
+    display: inline-block;
+    background-image: url("http://ajax.aspnetcdn.com/ajax/bootstrap/2.3.2/img/glyphicons-halflings.png");
+    width: 15px;
+    height: 15px;
+    margin-left: 20px;
+    background-position: 206px -96px;
+}
+.bottom .btn:hover {
+    width: 95%;
+}
+
+/*Icons*/
+
+.icon {
+    background-image: url("http://ajax.aspnetcdn.com/ajax/bootstrap/2.3.2/img/glyphicons-halflings.png");
+    width: 15px;
+    height: 15px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+.heart {
+    background-position: 374px 0;
+}
+.full-star {
+    background-position: 349px 0;
+}
+.transp-star {
+    background-position: 326px 0;
+}
+.download {
+    background-position: 375px -23px;
+}
+.delete {
+    background-position: 14px 0;
+}
+.arrow {
+    background-position: 206px -96px;
+}
